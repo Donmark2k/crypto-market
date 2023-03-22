@@ -6,7 +6,7 @@ import {
 } from 'react-bootstrap';
 import { BsGear, BsMic, BsArrowLeftShort } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
-import { searchField } from '../redux/countries/countrySlice';
+import { searchCrypto } from '../redux/crypto/cryptoSlice';
 import logo from '../asset/planet.png';
 
 function NavBar() {
@@ -20,7 +20,7 @@ function NavBar() {
   const searchHandler = (e) => {
     setSearchValue(e.target.value);
 
-    dispatch(searchField(e.target.value));
+    dispatch(searchCrypto(e.target.value));
   };
 
   return (

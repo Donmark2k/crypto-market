@@ -6,13 +6,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
-import { fetchCountries } from '../redux/countries/countrySlice';
+import { fetchCrypto } from '../redux/cryptos/cryptoSlice';
 
 const Crypto = () => {
   const dispatch = useDispatch();
-  const status = useSelector((state) => state.countries.status);
-  const countries = useSelector((state) => state.countries.countryList);
-  const searchCountry = useSelector((state) => state.countries.search);
+  const status = useSelector((state) => state.crypto.status);
+  const countries = useSelector((state) => state.crypto.cryptoList);
+  const searchCountry = useSelector((state) => state.crypto.search);
 
   const displayCountries = () => {
     if (searchCountry === undefined) {
@@ -28,7 +28,7 @@ const Crypto = () => {
 
   useEffect(() => {
     if (status === 'idle') {
-      dispatch(fetchCountries());
+      dispatch(fetchCrypto());
     }
   }, [status, dispatch]);
   return (

@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
-import cryptoReducer from './countries/countrySlice';
+import cryptoReducer from './countries/cryptoSlice';
 
 const logger = createLogger({
   // Options for the logger can be passed here
