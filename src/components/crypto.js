@@ -11,18 +11,29 @@ import { fetchCrypto } from '../redux/cryptos/cryptoSlice';
 const Crypto = () => {
   const dispatch = useDispatch();
   const status = useSelector((state) => state.crypto.status);
-  const countries = useSelector((state) => state.crypto.cryptoList);
-  const searchCountry = useSelector((state) => state.crypto.search);
+  const coins = useSelector((state) => state.crypto.cryptoList);
+  console.log('kAI', coins, 'Onyeka');
+  const searchCrypto = useSelector((state) => state.crypto.search);
 
-  const displayCountries = () => {
-    if (searchCountry === undefined) {
-      return countries;
+  const displayCoins = () => {
+    if (searchCrypto === undefined) {
+      return coins;
     }
 
-    const filtered = countries.filter(
-      (country) => country.country.toLowerCase().includes(searchCountry.toLowerCase()),
+    // const filtered = coins.filter(
+    //   (coin) => coin.coin.toLowerCase().includes(searchCrypto.toLowerCase()),
+    // );
+    // const filtered = coins.filter(
+    //   (coin) => coin.coin.toLowerCase().includes(searchCrypto?.toLowerCase() ?? ''),
+    // );
+    // const filtered = coins.filter(
+    //   (coin) => coin.coin.toLowerCase().includes((searchCrypto || '').toLowerCase()),
+    // );
+    const filtered = coins.filter(
+      (coin) => coin?.coin?.toLowerCase().includes(searchCrypto?.toLowerCase()),
     );
-
+    
+    
     return filtered;
   };
 
@@ -34,14 +45,14 @@ const Crypto = () => {
   return (
     <Container style={{ display: 'block', margin: 'auto', width: '95%' }}>
       <Row style={{ display: 'flex', justifyContent: 'center' }}>
-        {displayCountries().map((country) => (
+        {displayCoins().map((coin) => (
           <Card
-            key={country.country}
+            key={coin.id}
             bg="light"
             style={{ width: '10rem', height: '12rem', margin: '4px' }}
           >
             <Link
-              to={`/country/${country.id}`}
+              to={`/country/${coin.name}`}
               style={{ width: '100%', height: '100%' }}
             >
               <Button
@@ -63,7 +74,7 @@ const Crypto = () => {
             </Link>
             <Card.Img
               variant="top"
-              src={country.flag}
+              src={coin.image}
               alt="flag"
               style={{
                 width: '8.3rem',
@@ -82,7 +93,7 @@ const Crypto = () => {
                   textAlign: 'center',
                 }}
               >
-                {country.country}
+                {coin.price}
               </Card.Title>
               <Card.Text
                 style={{
@@ -93,7 +104,7 @@ const Crypto = () => {
                   textAlign: 'right',
                 }}
               >
-                {country.cases}
+                {coin.price}
               </Card.Text>
             </Card.Body>
           </Card>
