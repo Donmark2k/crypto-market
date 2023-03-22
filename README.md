@@ -30,7 +30,7 @@
 
 # 🚀 Covid Statistics <a name="about-project"></a>
 
-<p> A COVID-19 statistics app is a mobile application designed to provide up-to-date information on the number of confirmed cases, deaths, and recoveries from the COVID-19 pandemic. The app can help users track the current situation of the pandemic in their country or region, and also provide information on the trends and patterns of the virus globally. </p>
+<p> A  crypto market app is a mobile or desktop application that allows users to track and analyze crypto currencies. These apps typically provide real-time updates on crypto currency prices, market capitalizations, trading volumes, and other relevant data.</p>
 
 ## 🛠 Built With <a name="built-with"> </a>
 
