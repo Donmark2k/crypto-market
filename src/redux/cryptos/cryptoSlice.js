@@ -5,13 +5,13 @@ import axios from 'axios';
 const api = 'https://api.coinstats.app/public/v1/coins';
 
 const initialState = {
-  countryList: [],
+  cryptoList: [],
   status: 'idle',
   error: null,
   search: '',
 };
 
-export const fetchCountries = createAsyncThunk('country/fetchCountries', async () => {
+export const fetchCrypto = createAsyncThunk('crypto/fetchCrypto', async () => {
   try {
     const response = await axios.get(api);
     return response.data;
