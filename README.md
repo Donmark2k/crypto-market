@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
+  <img src="https://cdn.icon-icons.com/icons2/3184/PNG/512/crypto_currency_icon_194090.png" alt="logo" width="140"  height="auto" />
+  <br/>
+  <h3> 🚀 <b>Crypto Market</b> 🚀</h3>
 
-## Available Scripts
+</div>
 
-In the project directory, you can run:
+# 📗 Table of Contents
 
-### `npm start`
+- [📖 About the Project](#about-project)
+  - [:camera: project screenshot](#screen-shoot)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 🚀 Covid Statistics <a name="about-project"></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<p> A COVID-19 statistics app is a mobile application designed to provide up-to-date information on the number of confirmed cases, deaths, and recoveries from the COVID-19 pandemic. The app can help users track the current situation of the pandemic in their country or region, and also provide information on the trends and patterns of the virus globally. </p>
 
-### `npm test`
+## 🛠 Built With <a name="built-with"> </a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-  HTML 5 , css3, javascript ES6, React , Redux and external API
 
-### `npm run build`
+### Tech Stack <a name="tech-stack"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-  React, redux, axios, jest webpack and babel
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Key Features <a name="key-features"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ <li>User can filter the country of their choice</li>
+  <li>The app display the information from API</li>
+  
+<p align="right">(<a href="#readme-top">back to top</a>)</p><!-- LIVE DEMO -->
 
-### `npm run eject`
+## 🚀 Live Demo <a name="live-demo"></a>
+- Here is a [Live Demo Link](https://covidst.netlify.app/)
+- Here is a [Live video Link](https://www.loom.com/share/b7bb9189a9364e7aa6406052c126af98)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project Screenshots
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Home page](./src/asset/screenshot.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 💻 Getting Started <a name="getting-started"></a>
 
-## Learn More
+To run on your localhost clone the project to local folder
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- copy [this link](https://github.com/Donmark2k/covid-stat.git).
+- get the directory that you want to clone the repository.
+- open the command prompt in this directory.
+- write git clone git@github.com:Donmark2k/covid-stat.git
+- go to the repository folder in your command prompt cd Space-travellers
+- use npm install to install the dependencies.
+- use npm start to start live server.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Analyzing the Bundle Size
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+In order to run this project you only need:
 
-### Making a Progressive Web App
+- Have a working and updated browser
+- Have a local version control like git install on your computer
+- Have an account and sign in on GitHub, as online/remote version control system
+- Basic knowledge in JS and React JS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Install
 
-### Advanced Configuration
+To install this project in your local machine use
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Clone the git repo using this command: `https://github.com/Donmark2k/covid-stat.git`
 
-### Deployment
+### Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To run the project, execute the following command:
 
-### `npm run build` fails to minify
+- In visual studio code open terminal then write "npm start" after on your browser open "http://localhost:3000".
+### Run tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `npx stylelint "/*.{css,scss}"**`: To test css code
+- `npx eslint .` : To test Eslint Report
+
+### To test the application
+
+- `npm install --save-dev jest`
+- `npm test`
+
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Chukwuemeka Ochuba**
+
+- GitHub: [@Donmark2k](https://github.com/Donmark2k)
+- Twitter: [@donmark2k](https://twitter.com/donmark2k)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/chukwuemeka-ochuba/)
+
+## 🔭 Future Features <a name="future-features"></a>
+- I will add time and date below the nav bar
+- I will add footer
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Donmark2k/covid-stat/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ⭐️ Show your support <a name="support"></a>
+
+- Give a ⭐️ if you like this project!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to appreciate [Microverse](https://www.microverse.org/) for providing the resources and the platform for us to be a Professional full-stack developer, and  I would specially thank   [ Nelson Sakwa](https://www.behance.net/sakwadesignstudio) who is the original author of this [design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
