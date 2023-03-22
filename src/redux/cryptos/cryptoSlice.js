@@ -14,7 +14,9 @@ const initialState = {
 export const fetchCrypto = createAsyncThunk('crypto/fetchCrypto', async () => {
   try {
     const response = await axios.get(api);
-    return response.data;
+    const data = await response.json();
+    console.log('Onyeka', data)
+    return data;
   } catch (error) {
     return error.message;
   }

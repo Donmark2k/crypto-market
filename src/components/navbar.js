@@ -6,7 +6,7 @@ import {
 } from 'react-bootstrap';
 import { BsGear, BsMic, BsArrowLeftShort } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
-import { searchCrypto } from '../redux/crypto/cryptoSlice';
+import { searchCrypto } from '../redux/cryptos/cryptoSlice';
 import logo from '../asset/planet.png';
 
 function NavBar() {
@@ -34,7 +34,7 @@ function NavBar() {
               style={{ color: '#0290FF', paddingLeft: '12px' }}
               onClick={() => {
                 setSearchValue('');
-                dispatch(searchField(''));
+                dispatch(searchCrypto(''));
               }}
             >
               <span className="profile">
