@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
-import countryReducer from './countries/countrySlice';
+import cryptoReducer from './countries/countrySlice';
 
 const logger = createLogger({
   // Options for the logger can be passed here
@@ -13,7 +13,7 @@ const logger = createLogger({
 
 const store = configureStore({
   reducer: {
-    countries: countryReducer,
+    crypto: cryptoReducer,
   },
   applyMiddleware: [thunk, logger],
 });
