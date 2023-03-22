@@ -20,17 +20,17 @@ export const fetchCrypto = createAsyncThunk('crypto/fetchCrypto', async () => {
   }
 });
 
-export const countrySlice = createSlice({
-  name: 'countries',
+export const cryptoSlice = createSlice({
+  name: 'crypto',
   initialState,
   reducers: {
-    searchField: (state, payload) => ({
+    searchCrypto: (state, payload) => ({
       ...state,
       search: payload.payload,
     }),
   },
   extraReducers(builder) {
-    builder.addCase(fetchCountries.pending, (state) => ({
+    builder.addCase(fetchCrypto.pending, (state) => ({
       ...state,
       status: 'loading',
     }))
