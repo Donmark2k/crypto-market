@@ -8,7 +8,7 @@ import { BsArrowRightCircle } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { fetchCountries } from '../redux/countries/countrySlice';
 
-const Countries = () => {
+const Crypto = () => {
   const dispatch = useDispatch();
   const status = useSelector((state) => state.countries.status);
   const countries = useSelector((state) => state.countries.countryList);
@@ -103,4 +103,4 @@ const Countries = () => {
   );
 };
 
-export default Countries;
+export default Crypto;

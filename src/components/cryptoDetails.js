@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 
-const CountryDetails = () => {
+const CryptoDetails = () => {
   const { id } = useParams();
 
   const countries = useSelector((state) => state.countries.countryList);
@@ -76,4 +76,4 @@ const CountryDetails = () => {
   );
 };
 
-export default CountryDetails;
+export default CryptoDetails;
