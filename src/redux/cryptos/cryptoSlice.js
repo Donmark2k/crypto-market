@@ -34,9 +34,9 @@ export const cryptoSlice = createSlice({
       ...state,
       status: 'loading',
     }))
-      .addCase(fetchCountries.fulfilled, (state, action) => ({
+      .addCase(fetchCrypto.fulfilled, (state, action) => ({
         ...state,
-        countryList: action.payload.map((country) => ({
+        cryptoList: action.payload.map((coin) => ({
           updated: country.updated,
           country: country.country,
           cases: country.cases,
@@ -51,7 +51,7 @@ export const cryptoSlice = createSlice({
         })),
         status: 'loaded',
       }))
-      .addCase(fetchCountries.rejected, (state, action) => ({
+      .addCase(fetchCrypto.rejected, (state, action) => ({
         ...state,
         status: 'failed',
         error: [...state.error, action.error.message],
@@ -59,5 +59,5 @@ export const cryptoSlice = createSlice({
   },
 
 });
-export const { searchField } = countrySlice.actions;
+export const { searchCrypto } = countrySlice.actions;
 export default countrySlice.reducer;
