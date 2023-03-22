@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const api = 'https://disease.sh/v3/covid-19/countries';
+const api = 'https://api.coinstats.app/public/v1/coins';
 
 const initialState = {
   countryList: [],
