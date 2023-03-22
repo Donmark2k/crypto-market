@@ -37,17 +37,17 @@ export const cryptoSlice = createSlice({
       .addCase(fetchCrypto.fulfilled, (state, action) => ({
         ...state,
         cryptoList: action.payload.map((coin) => ({
-          updated: country.updated,
-          country: country.country,
-          cases: country.cases,
-          tests: country.tests,
-          deaths: country.deaths,
-          population: country.population,
-          recovered: country.recovered,
-          active: country.active,
-          critical: country.critical,
-          id: country.countryInfo._id,
-          flag: country.countryInfo.flag,
+          updated: coin.updated,
+          country: coin.country,
+          cases: coin.cases,
+          tests: coin.tests,
+          deaths: coin.deaths,
+          population: coin.population,
+          recovered: coin.recovered,
+          active: coin.active,
+          critical: coin.critical,
+          id: coin.countryInfo._id,
+          flag: coin.countryInfo.flag,
         })),
         status: 'loaded',
       }))
@@ -59,5 +59,5 @@ export const cryptoSlice = createSlice({
   },
 
 });
-export const { searchCrypto } = countrySlice.actions;
-export default countrySlice.reducer;
+export const { searchCrypto } = cryptoSlice.actions;
+export default cryptoSlice.reducer;
