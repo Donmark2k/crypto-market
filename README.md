@@ -42,14 +42,13 @@
 
 ### Key Features <a name="key-features"></a>
 
- <li>User can filter the country of their choice</li>
+ <li>User can filter the crypto of their choice</li>
   <li>The app display the information from API</li>
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p><!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- Here is a [Live Demo Link](https://covidst.netlify.app/)
-- Here is a [Live video Link](https://www.loom.com/share/b7bb9189a9364e7aa6406052c126af98)
+- Here is a [Live Demo Link](https://cryptost.netlify.app/)
 
 ## Project Screenshots
 
@@ -61,7 +60,7 @@
 
 To run on your localhost clone the project to local folder
 
-- copy [this link](https://github.com/Donmark2k/covid-stat.git).
+- copy [this link](https://github.com/Donmark2k/crypto-market.git).
 - get the directory that you want to clone the repository.
 - open the command prompt in this directory.
 - write git clone git@github.com:Donmark2k/covid-stat.git
@@ -87,7 +86,7 @@ In order to run this project you only need:
 
 To install this project in your local machine use
 
-- Clone the git repo using this command: `https://github.com/Donmark2k/covid-stat.git`
+- Clone the git repo using this command: `https://github.com/Donmark2k/crypto-market.git`
 
 ### Usage
 
@@ -98,12 +97,6 @@ To run the project, execute the following command:
 
 - `npx stylelint "/*.{css,scss}"**`: To test css code
 - `npx eslint .` : To test Eslint Report
-
-### To test the application
-
-- `npm install --save-dev jest`
-- `npm test`
-
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -121,7 +114,7 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Donmark2k/covid-stat/issues).
+Feel free to check the [issues page](https://github.com/Donmark2k/crypto-market/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,7 +126,7 @@ Feel free to check the [issues page](https://github.com/Donmark2k/covid-stat/iss
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to appreciate [Microverse](https://www.microverse.org/) for providing the resources and the platform for us to be a Professional full-stack developer, and  I would specially thank   [ Nelson Sakwa](https://www.behance.net/sakwadesignstudio) who is the original author of this [design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
+I would like to appreciate [Microverse](https://www.microverse.org/) for providing the resources and the platform for us to be a Professional full-stack developer.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
