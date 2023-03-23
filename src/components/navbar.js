@@ -45,6 +45,8 @@ function NavBar() {
                     width: '30px',
                     cursor: 'pointer',
                     transition: 'all ease-in 300ms',
+                    paddingRight: '0',
+                    marginRight: '0'
                   }}
                 />
               </span>
@@ -62,7 +64,7 @@ function NavBar() {
               style={{ paddingRight: '2px' }}
             />
             {' '}
-            COVID-STAT
+            CRYPTO-STAT
           </Navbar.Brand>
           {location.pathname === '/' && (
             <div className="">
@@ -89,7 +91,7 @@ function NavBar() {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">
-                covid-stat
+                crypto-stat
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>

@@ -13,15 +13,17 @@ const CryptoDetails = () => {
 
   return (
     <Container style={{
-      backgroundColor: 'green', width: '100%', height: '100%' }}
+      backgroundColor: 'gray', width: '100%', height: '100%' }}
     >
       <Card style={{
         backgroundColor: 'white', width: '90%', height: '100%', fontSize: '18px', display: 'block', margin: '0 auto',fontWeight : '600',
         fontFamily: 'san-serif',
+        color: '#800000'
       }}
       >
         <Card.Title style={{
-          fontSize: '24px',
+          fontSize: '28px',
+          color: '#0290FF',
           fontWeight: 'bold',
           textAlign: 'center',
           padding: '12px',
