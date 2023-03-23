@@ -46,7 +46,7 @@ function NavBar() {
                     cursor: 'pointer',
                     transition: 'all ease-in 300ms',
                     paddingRight: '0',
-                    marginRight: '0'
+                    marginRight: '0',
                   }}
                 />
               </span>
@@ -82,6 +82,7 @@ function NavBar() {
           <Navbar.Toggle
             aria-controls="offcanvasNavbar"
             onClick={handleOffcanvasToggle}
+            style={{backgroundColor: '#0290FF'}}
           />
           <Navbar.Offcanvas
             show={showOffcanvas}
@@ -95,7 +96,8 @@ function NavBar() {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-5">
+              <Nav className="justify-content-end flex-grow-1 pe-5" style ={{backgroundColor: 'rgba(255, 255, 255, 0.5)'}}
+>
                 <NavLink
                   className="nav-link"
                   to="/"

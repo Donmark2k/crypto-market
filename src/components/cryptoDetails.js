@@ -12,13 +12,19 @@ const CryptoDetails = () => {
   console.log(coin, name);
 
   return (
-    <Container style={{
-      backgroundColor: 'gray', width: '100%', height: '100%' }}
-    >
+    <Container style={{ backgroundColor: 'rgb(23, 33, 53)', width: '100%', height: '100%', padding: '1rem' }}>
       <Card style={{
-        backgroundColor: 'white', width: '90%', height: '100%', fontSize: '18px', display: 'block', margin: '0 auto',fontWeight : '600',
+        backgroundColor: 'rgba(17, 63, 154, 0.3)',
+        width: '90%',
+        height: '100%',
+        fontSize: '18px',
+        display: 'block',
+        margin: '0 auto',
+        fontWeight: '600',
         fontFamily: 'san-serif',
-        color: '#800000'
+        color: '#fff',
+        padding: '6px',
+        borderRadius: '18px'
       }}
       >
         <Card.Title style={{
@@ -53,15 +59,17 @@ const CryptoDetails = () => {
 
             {coin.symbol}
           </Card.Title>
-          <Card.Text >
+          <Card.Text>
             <strong> Price:</strong>
             {' '}
-            ${Math.ceil(coin.price)}
+            $
+            {Math.ceil(coin.price)}
           </Card.Text>
-          <Card.Text >
+          <Card.Text>
             <strong> Market Cap:</strong>
             {' '}
-            ${Math.ceil(coin.cap)}
+            $
+            {Math.ceil(coin.cap)}
           </Card.Text>
           <Card.Text>
             <strong>Hourly Price Change:</strong>
@@ -69,13 +77,14 @@ const CryptoDetails = () => {
             {coin.priceChangeH}
             %
           </Card.Text>
-          <Card.Text >
+          <Card.Text>
             <strong>Daily Price Change:</strong>
             {' '}
-            {coin.priceChangeD}%
+            {coin.priceChangeD}
+            %
           </Card.Text>
           <Card.Text>
-            <strong>Quantity in Circulation:</strong>
+            <strong>Circulating Supply:</strong>
             {' '}
             {coin.total}
           </Card.Text>
@@ -85,9 +94,11 @@ const CryptoDetails = () => {
             {coin.available}
           </Card.Text>
           <Card.Text>
-            <strong>Visit our website at: </strong>
+            <strong>
             {' '}
-            {coin.website}
+            <a href={coin.website}> Click Here to visit their website</a>
+            </strong>
+            
           </Card.Text>
         </Card.Body>
       </Card>
