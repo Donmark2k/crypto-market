@@ -13,29 +13,28 @@ const Crypto = () => {
   const status = useSelector((state) => state.crypto.status);
   const coins = useSelector((state) => state.crypto.cryptoList);
   console.log('kAI', coins, 'Onyeka');
-  const searchCrypto = useSelector((state) => state.crypto.search);
+  // const searchCrypto = useSelector((state) => state.crypto.search);
 
-  const displayCoins = () => {
-    if (searchCrypto === undefined) {
-      return coins;
-    }
+  // const displayCoins = () => {
+  //   if (searchCrypto === undefined) {
+  //     return coins;
+  //   }
 
-    // const filtered = coins.filter(
-    //   (coin) => coin.coin.toLowerCase().includes(searchCrypto.toLowerCase()),
-    // );
-    // const filtered = coins.filter(
-    //   (coin) => coin.coin.toLowerCase().includes(searchCrypto?.toLowerCase() ?? ''),
-    // );
-    // const filtered = coins.filter(
-    //   (coin) => coin.coin.toLowerCase().includes((searchCrypto || '').toLowerCase()),
-    // );
-    const filtered = coins.filter(
-      (coin) => coin?.coin?.toLowerCase().includes(searchCrypto?.toLowerCase()),
-    );
-    
-    
-    return filtered;
-  };
+  // const filtered = coins.filter(
+  //   (coin) => coin.coin.toLowerCase().includes(searchCrypto.toLowerCase()),
+  // );
+  // const filtered = coins.filter(
+  //   (coin) => coin.coin.toLowerCase().includes(searchCrypto?.toLowerCase() ?? ''),
+  // );
+  // const filtered = coins.filter(
+  //   (coin) => coin.coin.toLowerCase().includes((searchCrypto || '').toLowerCase()),
+  // );
+  // const filtered = coins.filter(
+  // (coin) => coin?.coin?.toLowerCase().includes(searchCrypto?.toLowerCase()),
+  // );
+
+  // return filtered;
+  // };
 
   useEffect(() => {
     if (status === 'idle') {
@@ -45,33 +44,44 @@ const Crypto = () => {
   return (
     <Container style={{ display: 'block', margin: 'auto', width: '95%' }}>
       <Row style={{ display: 'flex', justifyContent: 'center' }}>
-        {displayCoins().map((coin) => (
+        {coins.map((coin) => (
           <Card
             key={coin.id}
             bg="light"
-            style={{ width: '10rem', height: '12rem', margin: '4px' }}
+            style={{ width: '60rem', height: '12rem', margin: '4px' }}
           >
-            <Link
-              to={`/country/${coin.name}`}
-              style={{ width: '100%', height: '100%' }}
+            <div style={{
+              backgroundColor: 'green', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', margin: '4px', width: '100%',
+            }}
             >
-              <Button
-                style={{ width: '4rem', border: 'none', background: 'none' }}
-                className="see-more"
-                variant="primary"
+              <p>
+                {' '}
+                {coin.rank}
+                {' '}
+              </p>
+
+              <Link
+                to={`/crypto/${coin.name}`}
               >
-                <BsArrowRightCircle
-                  style={{
-                    color: '#0290FF',
-                    height: '20px',
-                    width: '20px',
-                    cursor: 'pointer',
-                    transition: 'all ease-in 300ms',
-                    marginLeft: '250%',
-                  }}
-                />
-              </Button>
-            </Link>
+
+                <Button
+                  style={{ width: '4rem', border: 'none', background: 'white' }}
+                  className="see-more"
+                  variant="primary"
+                >
+                  <BsArrowRightCircle
+                    style={{
+                      color: '#0290FF',
+                      height: '20px',
+                      width: '20px',
+                      cursor: 'pointer',
+                      transition: 'all ease-in 300ms',
+                      // marginLeft: '250%',
+                    }}
+                  />
+                </Button>
+              </Link>
+            </div>
             <Card.Img
               variant="top"
               src={coin.image}

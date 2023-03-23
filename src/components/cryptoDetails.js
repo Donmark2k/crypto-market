@@ -5,71 +5,88 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 
 const CryptoDetails = () => {
-  const { id } = useParams();
-
-  const countries = useSelector((state) => state.countries.countryList);
-  const country = countries.find((c) => c.id === parseInt(id, 10));
+  const { name } = useParams();
+  const coins = useSelector((state) => state.crypto.cryptoList);
+  const coin = coins.find((c) => c.name === (name));
+  console.log(name);
+  console.log(coin, name);
 
   return (
-    <Container>
-      <Card bg="light" style={{ width: '100%', height: '100%', marginBottom: '24px' }}>
+    <Container style={{
+      backgroundColor: 'green', width: '100%', height: '100%' }}
+    >
+      <Card style={{
+        backgroundColor: 'white', width: '90%', height: '100%', fontSize: '18px', display: 'block', margin: '0 auto',fontWeight : '600',
+        fontFamily: 'san-serif',
+      }}
+      >
+        <Card.Title style={{
+          fontSize: '24px',
+          fontWeight: 'bold',
+          textAlign: 'center',
+          padding: '12px',
+        }}
+        >
+
+          {coin.name}
+        </Card.Title>
         <Card.Img
           variant="top"
-          src={country.flag}
+          src={coin.image}
           alt="flag"
-          style={{ width: 'auto', height: '250px' }}
+          style={{
+            width: '60px', height: '60px', display: 'block', margin: '0 auto',
+          }}
         />
         <Card.Body>
           <Card.Title
             style={{
-              fontSize: '24px',
-              fontWeight: 'bold',
+              fontSize: '12px',
+              fontWeight: '900',
               textAlign: 'center',
+              padding: '0',
+              margin: '0',
             }}
           >
-            {country.country}
+
+            {coin.symbol}
           </Card.Title>
-          <div className="row">
-            <div className="col-lg-6 col-sm-12">
-              <Card.Text style={{ fontSize: '16px' }}>
-                <strong>Total Population:</strong>
-                {' '}
-                {country.population}
-              </Card.Text>
-              <Card.Text style={{ fontSize: '16px' }}>
-                <strong>Total Population Tested:</strong>
-                {' '}
-                {country.tests}
-              </Card.Text>
-              <Card.Text style={{ fontSize: '16px' }}>
-                <strong>Total Cases:</strong>
-                {' '}
-                {country.cases}
-              </Card.Text>
-              <Card.Text style={{ fontSize: '16px' }}>
-                <strong>Recovered:</strong>
-                {' '}
-                {country.recovered}
-              </Card.Text>
-            </div>
-            <div className="col-lg-6 col-sm-12">
-              <Card.Text style={{ fontSize: '16px' }}>
-                <strong>Deaths:</strong>
-                {' '}
-                {country.deaths}
-              </Card.Text>
-              <Card.Text style={{ fontSize: '16px' }}>
-                <strong>Active Cases:</strong>
-                {' '}
-                {country.active}
-              </Card.Text>
-              <Card.Text style={{ fontSize: '16px' }}>
-                <strong>Critical Cases:</strong>
-                {' '}
-                {country.critical}
-              </Card.Text>
-            </div>
-          </div>
+          <Card.Text >
+            <strong> Price:</strong>
+            {' '}
+            ${Math.ceil(coin.price)}
+          </Card.Text>
+          <Card.Text >
+            <strong> Market Cap:</strong>
+            {' '}
+            ${Math.ceil(coin.cap)}
+          </Card.Text>
+          <Card.Text>
+            <strong>Hourly Price Change:</strong>
+            {' '}
+            {coin.priceChangeH}
+            %
+          </Card.Text>
+          <Card.Text >
+            <strong>Daily Price Change:</strong>
+            {' '}
+            {coin.priceChangeD}%
+          </Card.Text>
+          <Card.Text>
+            <strong>Quantity in Circulation:</strong>
+            {' '}
+            {coin.total}
+          </Card.Text>
+          <Card.Text>
+            <strong> Available Quantity:</strong>
+            {' '}
+            {coin.available}
+          </Card.Text>
+          <Card.Text>
+            <strong>Visit our website at: </strong>
+            {' '}
+            {coin.website}
+          </Card.Text>
         </Card.Body>
       </Card>
     </Container>
