@@ -6,7 +6,7 @@ import {
 } from 'react-bootstrap';
 import { BsGear, BsMic, BsArrowLeftShort } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
-import { searchCrypto } from '../redux/cryptos/cryptoSlice';
+import { searchField } from '../redux/cryptos/cryptoSlice';
 import logo from '../asset/planet.png';
 
 function NavBar() {
@@ -20,7 +20,7 @@ function NavBar() {
   const searchHandler = (e) => {
     setSearchValue(e.target.value);
 
-    dispatch(searchCrypto(e.target.value));
+    dispatch(searchField(e.target.value));
   };
 
   return (
@@ -34,7 +34,7 @@ function NavBar() {
               style={{ color: '#0290FF', paddingLeft: '12px' }}
               onClick={() => {
                 setSearchValue('');
-                dispatch(searchCrypto(''));
+                dispatch(searchField(''));
               }}
             >
               <span className="profile">
@@ -82,7 +82,7 @@ function NavBar() {
           <Navbar.Toggle
             aria-controls="offcanvasNavbar"
             onClick={handleOffcanvasToggle}
-            style={{backgroundColor: '#0290FF'}}
+            style={{ backgroundColor: '#0290FF' }}
           />
           <Navbar.Offcanvas
             show={showOffcanvas}
@@ -96,8 +96,10 @@ function NavBar() {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-5" style ={{backgroundColor: 'rgba(255, 255, 255, 0.5)'}}
->
+              <Nav
+                className="justify-content-end flex-grow-1 pe-5"
+                style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }}
+              >
                 <NavLink
                   className="nav-link"
                   to="/"

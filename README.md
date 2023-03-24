@@ -48,7 +48,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p><!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- Here is a [Live Demo Link](https://cryptost.netlify.app/)
+<!-- - Here is a [Live Demo Link](https://cryptost.netlify.app/) -->
 
 ## Project Screenshots
 
