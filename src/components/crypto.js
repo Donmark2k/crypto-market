@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { fetchCrypto } from '../redux/cryptos/cryptoSlice';
+import '../App.css';
 
 const Crypto = () => {
   const dispatch = useDispatch();

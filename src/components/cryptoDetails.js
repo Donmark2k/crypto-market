@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
+import '../App.css';
+
 
 const CryptoDetails = () => {
   const { name } = useParams();
