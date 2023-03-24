@@ -24,7 +24,7 @@ export const cryptoSlice = createSlice({
   name: 'crypto',
   initialState,
   reducers: {
-    searchCrypto: (state, payload) => ({
+    searchField: (state, payload) => ({
       ...state,
       search: payload.payload,
     }),
@@ -61,5 +61,5 @@ export const cryptoSlice = createSlice({
 
 });
 
-export const { searchCrypto } = cryptoSlice.actions;
+export const { searchField } = cryptoSlice.actions;
 export default cryptoSlice.reducer;

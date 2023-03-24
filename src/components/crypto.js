@@ -10,37 +10,31 @@ const Crypto = () => {
   const status = useSelector((state) => state.crypto.status);
   const coins = useSelector((state) => state.crypto.cryptoList);
   console.log('kAI', coins, 'Onyeka');
-  // const searchCrypto = useSelector((state) => state.crypto.search);
+  const searchField = useSelector((state) => state.crypto.search);
+console.log(searchField);
+  const displayCoins = () => {
+    if (searchField === '' || undefined) {
+      return coins;
+    }
 
-  // const displayCoins = () => {
-  //   if (searchCrypto === undefined) {
-  //     return coins;
-  //   }
+    const filtered = coins.filter(
+      (coin) => coin.id.toLowerCase().includes(searchField.toLowerCase()),
+    );
 
-  // const filtered = coins.filter(
-  //   (coin) => coin.coin.toLowerCase().includes(searchCrypto.toLowerCase()),
-  // );
-  // const filtered = coins.filter(
-  //   (coin) => coin.coin.toLowerCase().includes(searchCrypto?.toLowerCase() ?? ''),
-  // );
-  // const filtered = coins.filter(
-  //   (coin) => coin.coin.toLowerCase().includes((searchCrypto || '').toLowerCase()),
-  // );
-  // const filtered = coins.filter(
-  // (coin) => coin?.coin?.toLowerCase().includes(searchCrypto?.toLowerCase()),
-  // );
-
-  // return filtered;
-  // };
+  return filtered;
+  };
 
   useEffect(() => {
     if (status === 'idle') {
       dispatch(fetchCrypto());
     }
   }, [status, dispatch]);
+  console.log(displayCoins(), 'Friday')
   return (
+    <>
+        <p style={{ fontSize: '150%', color: 'rgba(17, 63, 154, 0.7)', textAlign: 'center',  margin: '0 auto', fontWeight: '700'}} >  Data from coinstats </p>
     <section className="crypto-Container">
-      {coins.map((coin) => (
+      {displayCoins().map((coin) => (
         <div className="coinCard" key={coin.id}>
           <div style={{
             height: '18px', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', margin: '4px', width: '100%',
@@ -106,6 +100,7 @@ const Crypto = () => {
         </div>
       ))}
     </section>
+    </>
   );
 };
 
