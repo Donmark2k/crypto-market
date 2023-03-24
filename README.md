@@ -28,7 +28,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 🚀 Covid Statistics <a name="about-project"></a>
+# 🚀 Crypto Statistics <a name="about-project"></a>
 
 <p> A  crypto market app is a mobile or desktop application that allows users to track and analyze crypto currencies. These apps typically provide real-time updates on crypto currency prices, market capitalizations, trading volumes, and other relevant data.</p>
 
@@ -48,7 +48,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p><!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-<!-- - Here is a [Live Demo Link](https://cryptost.netlify.app/) -->
+- Here is a [Live Demo Link](https://cryptost.netlify.app/)
 
 ## Project Screenshots
 
