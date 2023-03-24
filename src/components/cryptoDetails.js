@@ -5,16 +5,16 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import '../App.css';
 
-
 const CryptoDetails = () => {
   const { name } = useParams();
   const coins = useSelector((state) => state.crypto.cryptoList);
   const coin = coins.find((c) => c.name === (name));
-  console.log(name);
-  console.log(coin, name);
 
   return (
-    <Container style={{ backgroundColor: 'rgb(23, 33, 53)', width: '100%', height: '100%', padding: '1rem' }}>
+    <Container style={{
+      backgroundColor: 'rgb(23, 33, 53)', width: '100%', height: '100%', padding: '1rem',
+    }}
+    >
       <Card style={{
         backgroundColor: 'rgba(17, 63, 154, 0.3)',
         width: '90%',
@@ -26,7 +26,7 @@ const CryptoDetails = () => {
         fontFamily: 'san-serif',
         color: '#fff',
         padding: '6px',
-        borderRadius: '18px'
+        borderRadius: '18px',
       }}
       >
         <Card.Title style={{
@@ -97,10 +97,10 @@ const CryptoDetails = () => {
           </Card.Text>
           <Card.Text>
             <strong>
-            {' '}
-            <a href={coin.website}> Click Here to visit their website</a>
+              {' '}
+              <a href={coin.website}> Click Here to visit their website</a>
             </strong>
-            
+
           </Card.Text>
         </Card.Body>
       </Card>
