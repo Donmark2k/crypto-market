@@ -52,7 +52,7 @@
 
 ## Project Screenshots
 
-![Home page](./src/asset/screenshot.png)
+![Home page](./src/asset/ccccccccccccccccc.PNG)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
