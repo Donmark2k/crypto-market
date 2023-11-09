@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../App.css';
 import {
   Nav, Navbar, Container, Offcanvas,
 } from 'react-bootstrap';
-import { BsGear, BsMic, BsArrowLeftShort } from 'react-icons/bs';
+import { BsEnvelopeAt, BsWhatsapp, BsArrowLeftShort } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
 import { searchField } from '../redux/cryptos/cryptoSlice';
 import logo from '../asset/planet.png';
@@ -100,14 +100,9 @@ function NavBar() {
                 className="justify-content-end flex-grow-1 pe-5"
                 style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }}
               >
-                <NavLink
-                  className="nav-link"
-                  to="/"
-                  as={Link}
-                  onClick={handleOffcanvasClose}
-                >
+                <Nav.Link href="https://api.whatsapp.com/send?phone=2347063308955" target="_blank" rel="noopener">
                   <span className="">
-                    <BsMic
+                    <BsWhatsapp
                       style={{
                         color: '#0290FF',
                         height: '30px',
@@ -117,25 +112,18 @@ function NavBar() {
                       }}
                     />
                   </span>
-                </NavLink>
-                <NavLink
-                  className="nav-link"
-                  to="/"
-                  as={Link}
-                  onClick={handleOffcanvasClose}
-                >
-                  <span className="profile">
-                    <BsGear
-                      style={{
-                        color: '#0290FF',
-                        width: '30px',
-                        height: '30px',
-                        cursor: 'pointer',
-                        transition: 'all ease-in 300ms',
-                      }}
-                    />
-                  </span>
-                </NavLink>
+                </Nav.Link>
+                <Nav.Link href="https://mail.google.com/mail/?view=cm&to=chukwuemekavp@gmail.com" target="_blank" rel="noopener">
+                  <BsEnvelopeAt
+                    style={{
+                      color: '#0290FF',
+                      width: '30px',
+                      height: '30px',
+                      cursor: 'pointer',
+                      transition: 'all ease-in 300ms',
+                    }}
+                  />
+                </Nav.Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

@@ -1,8 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const api = 'https://api.coinstats.app/public/v1/coins';
-
+const api = 'https://openapiv1.coinstats.app/coins?limit=100';
+const apiKey = 'X/KbH5s8ohF62cfZlIK9ABOfhKbA1lPT9wMlBkr69O4=';
 const initialState = {
   cryptoList: [],
   status: 'idle',
@@ -11,8 +11,13 @@ const initialState = {
 };
 export const fetchCrypto = createAsyncThunk('crypto/fetchCrypto', async () => {
   try {
-    const response = await axios.get(api, { responseType: 'json' });
-    const data = await response.data.coins;
+    const response = await axios.get(api, {
+      responseType: 'json',
+      headers: {
+        'X-API-KEY': apiKey,
+      },
+    });
+    const data = await response.data.result;
     return data;
   } catch (error) {
     return error.message;
