@@ -64,7 +64,7 @@ To run on your localhost clone the project to local folder
 - get the directory that you want to clone the repository.
 - open the command prompt in this directory.
 - write git clone git@github.com:Donmark2k/covid-stat.git
-- go to the repository folder in your command prompt cd Space-travellers
+- go to the repository folder in your command prompt cd crypto-market
 - use npm install to install the dependencies.
 - use npm start to start live server.
 
